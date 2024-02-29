@@ -2,37 +2,35 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-nav {
+  background-color: #288048; /* Красный цвет фона меню */
+  padding: 10px 0;
+  position: fixed; /* Меню будет фиксированным */
+  width: 100%; /* Меню будет тянуться на всю ширину */
+  top: 0; /* Прижимаем меню к верху страницы */
+  left: 0; /* Прижимаем меню к левому краю страницы */
+  box-shadow: 0 4px 2px -2px gray; /* Тень под меню */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App-button {
+  background-color: #387cc7; /* Зеленый цвет фона кнопок */
+  border: none;
   color: white;
+  padding: 10px 20px;
+  margin: 0 5px; /* Небольшой отступ между кнопками */
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.App-button:hover {
+  background-color: darkgreen; /* Цвет кнопки при наведении */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-content {
+  margin-top: 50px; /* Отступ, чтобы контент не перекрывал меню */
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
 }

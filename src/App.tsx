@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Меню с вкладками */}
+      <nav className="App-nav">
+        <a className="App-button" href="#home">Главная</a>
+        <a className="App-button" href="#about">О нас</a>
+        <a className="App-button" href="#contact">Контакты</a>
+      </nav>
+      {/* Содержимое вкладок */}
+      <main className="App-content">
+        <section id="home">
+          <h1>Добро пожаловать на главную страницу</h1>
+          <p>Здесь может быть ваше вступительное сообщение.</p>
+        </section>
+        <section id="about">
+          <h1>О нас</h1>
+          <p>Информация о вашей компании или проекте.</p>
+        </section>
+      </main>
     </div>
   );
 }
