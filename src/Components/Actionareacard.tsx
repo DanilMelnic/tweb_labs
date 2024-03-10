@@ -63,7 +63,6 @@ export default function ActionAreaCard() {
                             Цена: 240 лей
                         </Typography>
                     </CardContent>
-
             </Card>
             <Card sx={{ maxWidth: 345 }} style={cardStyle}>
                     <CardMedia

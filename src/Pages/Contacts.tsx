@@ -4,7 +4,7 @@ class Contacts extends Component {
     render() {
         return (
             <div>
-              Данил работает тут
+              Арина работает тут
             </div>
         );
     }
