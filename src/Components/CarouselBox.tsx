@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import vtoroe from "../img/Homeimg/vtoroe.jpg";
 import pervoe from "../img/Homeimg/pervoe.jpg";
+import cetire from "../img/Homeimg/cetire.jpg";
 import tretie from "../img/Homeimg/tretie.jpg";
 
-interface CarouselBoxProps {}
+interface CarouselBoxProps {
+  marginTop: number; // Пропс для указания отступа
+}
 
 interface CarouselBoxState {
   interval: number;
@@ -35,7 +38,7 @@ class CarouselBox extends Component<CarouselBoxProps, CarouselBoxState> {
   nextSlide = () => {
     // Метод для перехода к следующему слайду
     const { activeIndex } = this.state;
-    const images = [pervoe, vtoroe, tretie]; // Массив с изображениями
+    const images = [pervoe, vtoroe, tretie, cetire]; // Массив с изображениями
     const nextIndex = (activeIndex + 1) % images.length; // Определяем индекс следующего слайда
     this.setState({ activeIndex: nextIndex }); // Устанавливаем новый индекс активного слайда
   };
@@ -47,18 +50,25 @@ class CarouselBox extends Component<CarouselBoxProps, CarouselBoxState> {
 
   render() {
     const { activeIndex } = this.state;
+    const { marginTop } = this.props; // Получаем значение отступа из пропсов
+
     return (
-      <Carousel activeIndex={activeIndex} onSelect={this.selectSlide}>
-        <Carousel.Item>
-          <img className={"d-block w-100"} src={pervoe} alt={"Forest"} style={{ maxHeight: '700px', objectFit: 'cover' }} />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className={"d-block w-100"} src={vtoroe} alt={"Forest"} style={{ maxHeight: '700px', objectFit: 'cover' }} />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className={"d-block w-100"} src={tretie} alt={"Forest"} style={{ maxHeight: '700px', objectFit: 'cover' }} />
-        </Carousel.Item>
-      </Carousel>
+      <div style={{ marginTop: `${marginTop}px` }}> {/* Устанавливаем отступ */}
+        <Carousel activeIndex={activeIndex} onSelect={this.selectSlide}>
+          <Carousel.Item>
+            <img className={"d-block w-100"} src={pervoe} alt={"Forest"} style={{ maxHeight: '800px', objectFit: 'cover' }} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className={"d-block w-100"} src={vtoroe} alt={"Forest"} style={{ maxHeight: '800px', objectFit: 'cover' }} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className={"d-block w-100"} src={tretie} alt={"Forest"} style={{ maxHeight: '800px', objectFit: 'cover' }} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className={"d-block w-100"} src={cetire} alt={"Forest"} style={{ maxHeight: '800px', objectFit: 'cover' }} />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     );
   }
 }
