@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,14 +9,16 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined'; // Corrected import
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom'; // Corrected import
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+const defaultTheme = createTheme(); // Define defaultTheme (optional)
 
 export default function SignInSide() {
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -95,12 +97,20 @@ export default function SignInSide() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link
+                    component="button" // Wrap Link in a button
+                    onClick={() => navigate('/forgot-password')} // Use navigate to redirect
+                    variant="body2"
+                  >
                     Забыли пароль?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link
+                    component="button" // Wrap Link in a button
+                    onClick={() => navigate('/signup')} // Use navigate to redirect
+                    variant="body2"
+                  >
                     {"Зарегистрироваться"}
                   </Link>
                 </Grid>

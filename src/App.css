@@ -2,12 +2,12 @@
 
 /* Стили для Navbar */
 .navbar {
-  padding: 10px 0; /* Добавить отступы сверху и снизу для Navbar */
+  padding: 100px 0; /* Добавить отступы сверху и снизу для Navbar */
 }
 
 /* Стили для Navbar.Brand (логотипа) */
 .navbar-brand img {
-  margin-right: 15px; /* Добавить отступ справа от логотипа */
+  margin-right: 150px; /* Добавить отступ справа от логотипа */
 }
 
 /* Стили для Navbar.Toggle (иконки разворачивания меню на мобильных устройствах) */
@@ -39,4 +39,35 @@
 .btn:hover {
   background-color: #17a2b8; /* Изменить цвет фона кнопки при наведении */
   color: #fff; /* Изменить цвет текста кнопки при наведении */
+}
+.App {
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.App {
+  text-align: center; /* Выравниваем текст по центру */
+  height: 100vh; /* Задаем высоту контейнера на весь экран */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Выравниваем контент вверху контейнера */
+}
+
+.App-header {
+  background-color: #ffffff; /* Задаем цвет фона для заголовка */
+  width: 100%; /* Задаем ширину на весь экран */
+  padding: 40px 0; /* Добавляем немного отступов сверху и снизу */
+}
+
+.team-title {
+  font-size: 24px; /* Задаем размер шрифта */
+  color: #1a0606; /* Задаем цвет текста */
+  font-family: 'Arial', sans-serif; /* Выбираем шрифт */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Добавляем тень для текста */
+  letter-spacing: 1px; /* Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+  margin-bottom: 10px; /* Добавляем немного отступа снизу */
+}
+.carousel-mycomand-gap {
+    margin-top: 10px; /* Вы можете настроить отступ по вашему усмотрению */
 }

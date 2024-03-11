@@ -4,7 +4,7 @@ import vtoroe from "../img/Homeimg/vtoroe.jpg";
 import pervoe from "../img/Homeimg/pervoe.jpg";
 import cetire from "../img/Homeimg/cetire.jpg";
 import tretie from "../img/Homeimg/tretie.jpg";
-
+import '../App.css';
 interface CarouselBoxProps {
   marginTop: number; // Пропс для указания отступа
 }
@@ -53,6 +53,7 @@ class CarouselBox extends Component<CarouselBoxProps, CarouselBoxState> {
     const { marginTop } = this.props; // Получаем значение отступа из пропсов
 
     return (
+
       <div style={{ marginTop: `${marginTop}px` }}> {/* Устанавливаем отступ */}
         <Carousel activeIndex={activeIndex} onSelect={this.selectSlide}>
           <Carousel.Item>
@@ -68,6 +69,7 @@ class CarouselBox extends Component<CarouselBoxProps, CarouselBoxState> {
             <img className={"d-block w-100"} src={cetire} alt={"Forest"} style={{ maxHeight: '800px', objectFit: 'cover' }} />
           </Carousel.Item>
         </Carousel>
+
       </div>
     );
   }

@@ -9,7 +9,11 @@ import Time from '../Pages/Time';
 import Blog from '../Pages/Blog';
 import Feedback from '../Pages/Feedback';
 import Contacts from '../Pages/Contacts';
-import Login from '../Pages/Login'; // Import the Login component
+import Login from './loginsign/Login'; // Import the Login component
+import '../App.css';
+import SignUp from '../Components/loginsign/Signup';
+import Forgotpassword from "../Components/loginsign/Forgotpassword"
+import SignInSide from "../Components/loginsign/Signinside"
 
 class Header extends Component {
     render() {
@@ -43,6 +47,9 @@ class Header extends Component {
                     <Route exact path="/feedback" element={<Feedback />}/>
                     <Route exact path="/contacts" element={<Contacts />}/>
                     <Route exact path="/login" element={<Login />}/>
+                    <Route path="/" element={<SignInSide />} />
+                    <Route path="/signup" element={<SignUp />} /> {/* Добавляем новый маршрут */}
+                    <Route path="/forgot-password" element={<Forgotpassword />} />
                 </Routes>
 
                 {/* Метка и кнопка "Войти" */}
