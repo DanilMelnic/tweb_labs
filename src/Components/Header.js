@@ -14,6 +14,10 @@ import '../App.css';
 import SignUp from '../Components/loginsign/Signup';
 import Forgotpassword from "../Components/loginsign/Forgotpassword"
 import SignInSide from "../Components/loginsign/Signinside"
+import FillExample from "../Components/Information"
+import Facts from "../Pages/Informanionnavbar/Facts";
+import What from "../Pages/Informanionnavbar/what";
+import Records from "../Pages/Informanionnavbar/Records";
 
 class Header extends Component {
     render() {
@@ -38,19 +42,21 @@ class Header extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <Routes>
-                    <Route exact path="/" element={<Home />}/>
-                    <Route exact path="/abon" element={<Abonament />}/>
-                    <Route exact path="/pitanie" element={<Pitanie />}/>
-                    <Route exact path="/time" element={<Time />}/>
-                    <Route exact path="/blog" element={<Blog />}/>
-                    <Route exact path="/feedback" element={<Feedback />}/>
-                    <Route exact path="/contacts" element={<Contacts />}/>
-                    <Route exact path="/login" element={<Login />}/>
-                    <Route path="/" element={<SignInSide />} />
-                    <Route path="/signup" element={<SignUp />} /> {/* Добавляем новый маршрут */}
-                    <Route path="/forgot-password" element={<Forgotpassword />} />
-                </Routes>
+               <Routes>
+    <Route exact path="/" element={<Home />}/>
+    <Route exact path="/abon" element={<Abonament />}/>
+    <Route exact path="/pitanie" element={<Pitanie />}/>
+    <Route exact path="/time" element={<Time />}/>
+    <Route exact path="/blog" element={<Blog />}/>
+    <Route exact path="/feedback" element={<Feedback />}/>
+    <Route exact path="/contacts" element={<Contacts />}/>
+    <Route exact path="/login" element={<Login />}/>
+    <Route exact path="/signup" element={<SignUp />} /> {/* Добавляем новый маршрут */}
+    <Route exact path="/forgot-password" element={<Forgotpassword />} />
+                   <Route exact path="/facts" element={<Facts />} />
+                   <Route exact path="/what" element={<What />} />
+                   <Route exact path="/Records" element={<Records />} />
+</Routes>
 
                 {/* Метка и кнопка "Войти" */}
                 <div style={{ position: 'absolute', top: 30, right: 10 }}>

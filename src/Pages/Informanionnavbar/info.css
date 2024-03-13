@@ -1,0 +1,64 @@
+.card-group-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Отступ сверху */
+}
+
+.custom-card-group {
+  margin: 0; /* Убираем стандартные отступы */
+}
+
+.custom-card {
+  margin: 10px; /* Отступ между картами */
+  max-width: 400px; /* Максимальная ширина карточки */
+}
+.nav-link {
+  margin-top: 20px;
+  color: #110202; /* Цвет текста ссылок */
+  padding: 30px 45px; /* Отступы вокруг текста ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s, background-color 0.3s; /* Плавное изменение цвета и фона при наведении */
+  border-radius: 50px; /* Закругление углов */
+  font-weight: bold; /* Жирный шрифт */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+
+
+.nav-link:hover {
+  color: #e8e6e6; /* Цвет текста при наведении на ссылку */
+  background-color: #030d4f; /* Цвет фона при наведении на ссылку */
+  transform: scale(1.1); /* Увеличение размера при наведении */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+.custom-card {
+  position: relative; /* Устанавливаем позицию для псевдоэлементов */
+}
+
+.custom-card::before {
+  content: "ВАЖНО"; /* Текст, который появится сверху карточки */
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute; /* Абсолютное позиционирование */
+  top: -10px; /* Отступ сверху */
+  left: 50%; /* Положение по горизонтали */
+  transform: translateX(-50%); /* Центрирование текста по горизонтали */
+  background-color: #e30c0c; /* Цвет фона */
+  padding: 5px 10px; /* Отступы вокруг текста */
+  border-radius: 5px; /* Закругление углов */
+}
+
+.custom-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+/* Стили для контейнера с заголовком */
+.custom-container {
+  text-align: center; /* Выравнивание по центру */
+}
+
+/* Стили для заголовка */
+.custom-title {
+  margin-bottom: 20px; /* Отступ снизу */
+  font-size: 40px; /* Размер шрифта заголовка */
+  font-weight: bold; /* Жирный шрифт для заголовка */
+  color: #af1717; /* Цвет текста заголовка */
+}
